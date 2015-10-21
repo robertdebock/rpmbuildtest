@@ -7,9 +7,8 @@ before_install:
 - docker pull centos:latest
 
 script:
-- docker build -t rpmbuild .
-- docker ps -a
-#- docker run -t rpmbuild -v /data . 
+- docker build -t centos:rpmbuild .
+- docker run -t centos:rpmbuild
 
 notifications:
   email: false
