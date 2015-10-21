@@ -7,5 +7,4 @@ before_install:
 - docker pull centos:latest
 
 script:
-- docker run -d centos:latest /bin/sh -c "echo \"Hello World!\""
-- docker ps -a
+- docker run .
