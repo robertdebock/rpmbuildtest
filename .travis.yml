@@ -3,4 +3,4 @@ before_deploy:
 deploy:
   dist: 'centos/5'
 script:
-  yum -y update
+  lsb_release -a
