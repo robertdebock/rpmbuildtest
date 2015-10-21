@@ -5,5 +5,7 @@ services:
 
 before_install:
 - docker pull centos:latest
+
+script:
 - docker run -d -p 127.0.0.1:80:4567 centos:latest /bin/sh -c "cat /etc/redhat-release; uname -a"
 - docker ps -a
