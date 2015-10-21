@@ -10,3 +10,6 @@ script:
 - docker build -t rpmbuild .
 - docker ps -a
 #- docker run -t rpmbuild -v /data . 
+
+notifications:
+  email: false
