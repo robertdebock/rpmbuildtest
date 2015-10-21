@@ -1,0 +1,6 @@
+before_deploy:
+  "echo 'Ready?'"
+deploy:
+  dist: 'centos/5'
+script:
+  yum -y update
