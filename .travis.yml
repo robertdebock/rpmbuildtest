@@ -1,22 +1,9 @@
 sudo: required
-env:
-  #matrix:
-  - OS_TYPE=centos OS_VERSION=6
 
 services:
   - docker
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get upgrade lxc-docker
-  - echo 'DOCKER_OPTS="-H tcp://127.0.0.1:2375 -H unix:///var/run/docker.sock -s devicemapper"' | sudo tee /etc/default/docker > /dev/null
-  - sudo service docker restart
-  - sleep 5
-  - sudo docker pull weldpua2008/docker-ansible:${OS_TYPE}${OS_VERSION}_v${ANSIBLE_VERSION}
-
-script:
- # Run tests in Container
- - sudo docker run --rm=true -v `pwd`:/ansible-apache:rw weldpua2008/docker-ansible:${OS_TYPE}${OS_VERSION}_v${ANSIBLE_VERSION} /bin/bash -c "/ansible-apache/tests/test-in-docker-image.sh ${OS_TYPE} ${OS_VERSION} ${ANSIBLE_VERSION}"
-
-notifications:
-  email: false
+- docker pull centos:latest
+- docker run -d -p 127.0.0.1:80:4567 centos:latest /bin/sh -c "cat /etc/redhat-release; uname -a"
+- docker ps -a
