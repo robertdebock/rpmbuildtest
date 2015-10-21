@@ -7,10 +7,6 @@ before_install:
 - docker pull centos:latest
 
 script:
-#- docker build -t centos:rpmbuild .
-- pwd
-- ls -la
-- touch iets
 - docker run -v /home/travis/build/robertdebock/rpmbuildtest:/data centos:latest ls -la /data
 
 notifications:
