@@ -8,4 +8,5 @@ before_install:
 
 script:
 - docker build -t rpmbuild .
-- docker run -t rpmbuild -v /data . 
+- docker ps -a
+#- docker run -t rpmbuild -v /data . 
