@@ -15,5 +15,8 @@ To use this code for your own RPM: follow these steps:
 
 That should trigger new builds.
 
+Graphically (ASCII) this workflow looks like this:
+Git Hub -> Travis CI -> NOWHERE (See TODO:)
+
 TODO:
 RPM's are now built, but the resulting RPM's are not saved or pushed anywhere. This should be added to the rpmbuild.sh script.
