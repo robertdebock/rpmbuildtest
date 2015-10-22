@@ -14,6 +14,7 @@ A test shell script.
 %prep
 %{__cat} <<'EOF' > %{name}.txt
 Hello world!
+Hello
 EOF
 
 %install
