@@ -4,6 +4,7 @@ A repository to test rpmbuilding with Travis CI using a docker-host.
 This repository is configured to host an RPM SPEC file, which triggers a (Travis CI) build when changed.
 
 To use this code for your own RPM: follow these steps:
+
 1. Clone this project into your own. Each RPM should have it's own repository.
 2. Add your own SPEC file. You can delete test.spec which serves as an example.
 3. Add your software sources (.tar.gz/.zip/etc) to rpmbuild/SOURCES.
