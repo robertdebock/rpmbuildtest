@@ -1,4 +1,7 @@
 # rpmbuildtest
+
+[![Build Status](https://travis-ci.org/robertdebock/rpmbuildtest.svg?branch=master)](https://travis-ci.org/robertdebock/rpmbuildtest)
+
 A repository to test rpmbuilding with Travis CI using a docker-host.
 
 This repository is configured to host an RPM SPEC file, which triggers a (Travis CI) build when changed.
