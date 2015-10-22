@@ -6,7 +6,6 @@ URL: http://meinit.nl
 License: Apache License
 Group: Applications/Internet
 BuildRoot: %{_tmppath}/%{name}-root
-Requires: bash
 BuildArch: noarch
 
 %description
