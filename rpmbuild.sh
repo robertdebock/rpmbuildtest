@@ -73,8 +73,8 @@ checkvalues() {
 
 buildrpm() {
   chown root:root ${directory}/${specfile}
-  mkdir -p ${directory}/rpmbuild/{RPMS,BUILSD}
-  rpmbuild --define "_topdir ${directory}/rpmbuild" -ba /data/test.spec
+  mkdir -p ${directory}/rpmbuild/{RPMS,BUILD,SOUCES}
+  rpmbuild --define "_topdir ${directory}/rpmbuild" -ba ${directory}/${specfile}
 }
 
 readargs "$@"
