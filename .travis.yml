@@ -4,8 +4,7 @@ services:
   - docker
 
 script:
-#- docker run -v /home/travis/build/robertdebock/rpmbuildtest:/data robertdebock/docker-centos-rpmbuild rpmbuild --define '_topdir /data' -ba /data/test.spec
-- docker run -v /home/travis/build/robertdebock/rpmbuildtest:/data robertdebock/docker-centos-rpmbuild ls -l /data/test.spec
+- docker run -v /home/travis/build/robertdebock/rpmbuildtest:/data robertdebock/docker-centos-rpmbuild chown root:root /data/test.spec ; rpmbuild --define '_topdir /data' -ba /data/test.spec
 
 notifications:
   email: false
