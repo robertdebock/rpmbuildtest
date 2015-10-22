@@ -30,5 +30,5 @@ rm -rf ${RPM_BUILD_ROOT}
 %attr(755,root,root) /etc/%{name}.txt
 
 %changelog
-* Wed Oct 32 2015 Robert de Bock <robert@meinit.nl>
+* Wed Oct 21 2015 Robert de Bock <robert@meinit.nl>
 - Initial commit.
