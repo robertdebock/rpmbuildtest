@@ -5,7 +5,7 @@ services:
 
 script:
 #- docker run -v /home/travis/build/robertdebock/rpmbuildtest:/data robertdebock/docker-centos-rpmbuild /bin/sh /data/rpmbuild.sh -d /data -s test.spec
-- docker run -v $(pwd):/data robertdebock/docker-centos-rpmbuild /bin/sh /data/rpmbuild.sh -d /data -s test.spec
+- docker run -v $(pwd):/data robertdebock/docker-centos-rpmbuild /bin/sh /data/build.sh -d /data -s test.spec
 
 notifications:
   email: false
